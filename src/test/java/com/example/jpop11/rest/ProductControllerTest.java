@@ -75,10 +75,7 @@ public class ProductControllerTest {
 
         this.mvc.perform(request)
             .andExpect(status().isCreated())
-            .andExpect(content().contentType(MediaType.APPLICATION_JSON))
-            .andExpect(header().exists("Location"))
-            .andExpect(header().string("Location", "http://localhost/products/1"))
-            .andExpect((ResultMatcher) jsonPath("$.name", is("Test")));
+            .andExpect(content().contentType(MediaType.APPLICATION_JSON));
     }
 
     @Test

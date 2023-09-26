@@ -8,5 +8,4 @@ public record ProductDTO(
     public ProductDTO(Product product){
         this (product.id(),product.name(),product.description(),product.price);
     }
-
 }
